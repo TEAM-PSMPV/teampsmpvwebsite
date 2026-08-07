@@ -1,6 +1,6 @@
 # TEAM-PSMPV Website
 
-A responsive, multi-route TEAM-PSMPV website built with React, TypeScript, the Next.js App Router, Vinext, Motion and Zod. The visual system follows the supplied EVOLT reverse-engineering specification while using only TEAM-PSMPV branding, company content and approved personal assets.
+A responsive, multi-route TEAM-PSMPV website built with React, TypeScript, the Next.js App Router, Vinext, Motion and Zod. 
 
 ## Included routes
 
