@@ -36,7 +36,7 @@ If Wrangler is already authenticated to the correct Cloudflare account, skip
 1. Open Cloudflare Dashboard.
 2. Open **Workers & Pages** and select `team-psmpv`.
 3. Open **Settings → Domains & Routes**.
-4. Add the intended custom domain.
+4. Confirm `teampsmpv.com` and `www.teampsmpv.com` are attached. They are declared as custom domains in `wrangler.jsonc`.
 5. Confirm that `/`, `/services`, `/about-us`, `/case-study`, `/products`, `/products/offlinetts`, `/contact-us`, `/sitemap.xml` and `/robots.txt` load.
 
 ## Pre-launch checks
@@ -61,3 +61,9 @@ Then use:
 npm ci
 npm run deploy:cloudflare
 ```
+
+The repository workflow `.github/workflows/deploy-cloudflare.yml` performs linting, tests, artifact validation, and deployment on every push to `main`, and can also be started manually. It reads `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` from GitHub Actions secrets and never writes them to the repository.
+
+## Roll back
+
+If a production release is unhealthy, open the Cloudflare dashboard, select the `team-psmpv` Worker, open **Deployments**, choose the last known-good version, and roll back. Then revert the faulty Git commit through a reviewed pull request so the next deployment does not reintroduce it. Verify both custom domains after rollback.

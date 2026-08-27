@@ -1,0 +1,8 @@
+# Default ownership. Replace or supplement this address with a GitHub team handle
+# when the organization creates a dedicated website-maintainers team.
+* support@teampsmpv.com
+
+/.github/ support@teampsmpv.com
+/app/ support@teampsmpv.com
+/worker/ support@teampsmpv.com
+/wrangler.jsonc support@teampsmpv.com

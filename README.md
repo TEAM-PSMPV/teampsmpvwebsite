@@ -1,6 +1,11 @@
 # TEAM-PSMPV Website
 
-A responsive, multi-route TEAM-PSMPV website built with React, TypeScript, the Next.js App Router, Vinext, Motion and Zod. 
+[![CI](https://github.com/TEAM-PSMPV/teampsmpvwebsite/actions/workflows/ci.yml/badge.svg)](https://github.com/TEAM-PSMPV/teampsmpvwebsite/actions/workflows/ci.yml)
+[![Deploy](https://github.com/TEAM-PSMPV/teampsmpvwebsite/actions/workflows/deploy-cloudflare.yml/badge.svg)](https://github.com/TEAM-PSMPV/teampsmpvwebsite/actions/workflows/deploy-cloudflare.yml)
+
+Production: [teampsmpv.com](https://www.teampsmpv.com/)
+
+A responsive, multi-route TEAM-PSMPV website built with React, TypeScript, the Next.js App Router, Vinext, Motion and Zod.
 
 ## Included routes
 
@@ -27,6 +32,8 @@ npm run dev
 
 The development server prints the local URL.
 
+New contributors should start with [INSTRUCTIONS.md](INSTRUCTIONS.md). Project architecture and contribution rules are documented in [ARCHITECTURE.md](ARCHITECTURE.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Production validation
 
 ```bash
@@ -45,7 +52,7 @@ This is a dynamic Worker deployment, not a static drag-and-drop Pages upload. Th
 3. Run `npm install`.
 4. Authenticate once with `npx wrangler login`.
 5. Run `npm run deploy:cloudflare`.
-6. In Cloudflare, attach `teampsmpv.com` or the preferred subdomain to the new `team-psmpv` Worker.
+6. The Wrangler configuration attaches `teampsmpv.com` and `www.teampsmpv.com` as custom domains.
 
 For CI, set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, then run `npm ci && npm run deploy:cloudflare`.
 
@@ -58,3 +65,7 @@ To add direct server-side delivery later, connect an approved transactional emai
 ## Brand assets
 
 The project uses the supplied monochrome TEAM-PSMPV wordmark, lockup, monogram, favicon and founder photograph. Do not recolor or distort the official logo files.
+
+## Security and license
+
+Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md). This repository is proprietary; see [LICENSE.md](LICENSE.md).

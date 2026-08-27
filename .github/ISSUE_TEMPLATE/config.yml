@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: mailto:support@teampsmpv.com?subject=Security%3A%20teampsmpvwebsite
+    about: Report vulnerabilities privately; do not create a public issue.
+  - name: General support
+    url: https://www.teampsmpv.com/contact-us
+    about: Contact TEAM-PSMPV for product and service support.

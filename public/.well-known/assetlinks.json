@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.psmpv.offlinetts",
+      "sha256_cert_fingerprints": [
+        "A8:92:0F:2D:4D:A7:48:AD:F6:07:D5:14:88:36:A6:D2:43:B7:64:12:67:6F:C8:52:5F:D8:EA:98:88:19",
+        "A8:92:0F:2D:4D:A7:48:AD:F6:07:D5:14:88:36:A6:D2:43:B7:64:12:67:6F:C8:52:5F:D8:EA:98:88:19:8A:9E"
+      ]
+    }
+  }
+]

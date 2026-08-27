@@ -1,11 +1,11 @@
-import { access, readFile } from "node:fs/promises";
+import { access } from "node:fs/promises";
 import { constants } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const workerPath = resolve(projectRoot, "dist/server/index.js");
-const hostingPath = resolve(projectRoot, "dist/.openai/hosting.json");
+const assetManifestPath = resolve(projectRoot, "dist/client/.vite/manifest.json");
 
 async function requireFile(path, label) {
   try {
@@ -15,9 +15,8 @@ async function requireFile(path, label) {
   }
 }
 
-await requireFile(workerPath, "Sites Worker entry");
-await requireFile(hostingPath, "packaged Sites manifest");
-JSON.parse(await readFile(hostingPath, "utf8"));
+await requireFile(workerPath, "Cloudflare Worker entry");
+await requireFile(assetManifestPath, "client asset manifest");
 
 const workerUrl = pathToFileURL(workerPath);
 workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
@@ -30,5 +29,5 @@ if (!worker.default || typeof worker.default.fetch !== "function") {
 }
 
 console.log(
-  "Validated Sites artifact: ESM Worker default.fetch and hosting manifest are present.",
+  "Validated Cloudflare artifact: ESM Worker default.fetch and client assets are present.",
 );

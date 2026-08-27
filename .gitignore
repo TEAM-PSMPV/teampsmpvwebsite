@@ -29,6 +29,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -40,3 +41,24 @@ next-env.d.ts
 /.sites-runtime/
 /outputs/
 /work/
+
+# Local AI/editor state and credentials
+/.openai/
+/.codex/
+/.cursor/
+/.idea/
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/settings.json
+
+# Cloudflare local state and secrets
+/.dev.vars
+/.dev.vars.*
+/.wrangler/
+
+# OS and temporary files
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
