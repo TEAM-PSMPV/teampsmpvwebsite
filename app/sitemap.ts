@@ -10,6 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/products/offlinetts",
     "/products/offlinetts/privacy-policy",
     "/products/offlinetts/support",
+    "/products/visyn/privacy-policy",
+    "/products/visyn/terms",
+    "/products/visyn/support",
+    "/products/visyn/data-deletion",
     "/contact-us",
   ];
   return routes.map((route) => ({

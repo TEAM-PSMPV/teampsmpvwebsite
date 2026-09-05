@@ -1526,6 +1526,19 @@ main {
   text-transform: none;
 }
 
+.legal-document ul,
+.legal-document ol {
+  margin: 18px 0 24px;
+  padding-left: 24px;
+  color: #4f4f4f;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.legal-document li + li { margin-top: 8px; }
+
+.legal-document li::marker { color: var(--teal); }
+
 .legal-document a:not(.cut-button) {
   text-decoration: underline;
   text-underline-offset: 4px;
