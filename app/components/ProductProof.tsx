@@ -32,13 +32,18 @@ export function ProductProof() {
               <div className="proof-live-image-wrap">
                 <Image
                   className="proof-live-image"
-                  src="/images/leadforge-auth-surface.png"
+                  src="/images/leadforge-auth-panel.png"
                   alt="LeadForge sign-in surface"
-                  width={1280}
-                  height={1056}
+                  width={480}
+                  height={750}
                   sizes="(max-width: 767px) 92vw, 58vw"
                 />
               </div>
+            </div>
+            <div className="proof-evidence">
+              <span><small>SURFACE</small><strong>AUTH / LIVE</strong></span>
+              <span><small>PATH</small><strong>LOGIN → PIPELINE</strong></span>
+              <span><small>STATE</small><strong>READY TO OPEN</strong></span>
             </div>
             <div className="proof-feature-caption">
               <span>A real surface from the product system.</span>
