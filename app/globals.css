@@ -1467,6 +1467,42 @@ main {
   border-top: 1px solid #879b93;
 }
 
+.proof-gallery-surface {
+  position: relative;
+  min-height: 224px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-bottom: 1px solid #b8c9c1;
+  background: #53282a;
+}
+
+.proof-gallery-surface img {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform var(--motion-base) var(--ease-out);
+}
+
+.proof-gallery-surface > span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  background: #211b1d;
+  color: #f6ebdc;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+
+.proof-gallery-surface b { color: #f0c48d; font-size: 15px; font-weight: 400; }
+.proof-gallery-surface:hover img,
+.proof-gallery-surface:focus-visible img { transform: scale(1.03); }
+
 .proof-list-item {
   min-height: 0;
   flex: 1;

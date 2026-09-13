@@ -52,6 +52,20 @@ export function ProductProof() {
           </div>
 
           <div className="proof-list">
+            <a
+              className="proof-gallery-surface"
+              href={products[3].url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/template-gallery-surface.png"
+                alt="Template Gallery homepage"
+                fill
+                sizes="(max-width: 767px) 92vw, 31vw"
+              />
+              <span>Template Gallery / SHIPPED SURFACE <b aria-hidden="true">↗</b></span>
+            </a>
             {supportingProducts.map((product, index) => (
               <a
                 className="proof-list-item"
