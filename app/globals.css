@@ -466,8 +466,8 @@ main {
 .hero-layout {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, .86fr);
-  gap: clamp(60px, 8vw, 130px);
+  grid-template-columns: minmax(0, 1.5fr) minmax(350px, .85fr);
+  gap: clamp(40px, 5vw, 72px);
   align-items: center;
 }
 
@@ -478,7 +478,7 @@ main {
 .hero h1 {
   max-width: 920px;
   margin: 24px 0 30px;
-  font-size: clamp(4rem, 7.4vw, 7.2rem);
+  font-size: clamp(3.8rem, 6.6vw, 6.6rem);
   font-weight: 560;
   line-height: .91;
 }
@@ -673,7 +673,7 @@ main {
 
 .assembly-section {
   position: relative;
-  padding-block: 104px 116px;
+  padding-block: 82px 92px;
   background: #101615;
   color: var(--white);
   overflow: clip;
@@ -717,14 +717,14 @@ main {
 .assembly-layout {
   display: grid;
   grid-template-columns: minmax(280px, .8fr) minmax(0, 1.2fr);
-  gap: clamp(50px, 9vw, 142px);
+  gap: clamp(38px, 6vw, 86px);
   align-items: start;
 }
 
 .assembly-display {
   position: sticky;
   top: calc(var(--header-height) + 28px);
-  min-height: 540px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -764,7 +764,7 @@ main {
 
 .assembly-stage {
   position: relative;
-  min-height: 340px;
+  min-height: 280px;
   display: grid;
   place-items: center;
   margin-top: 20px;
@@ -1124,7 +1124,7 @@ main {
   display: grid;
   grid-template-columns: 58px 1fr;
   gap: 22px;
-  padding: 28px 0 32px;
+  padding: 20px 0 24px;
   border-bottom: 1px solid #3b4945;
   opacity: .58;
   transition: opacity var(--motion-base), color var(--motion-base);
@@ -1142,14 +1142,14 @@ main {
 .assembly-step-copy .mono-label { color: #7ad1c4; }
 
 .assembly-step-copy h3 {
-  margin: 14px 0 10px;
+  margin: 8px 0 8px;
   color: var(--white);
   font-size: clamp(22px, 2.3vw, 30px);
 }
 
 .assembly-step-copy > p:not(.mono-label) {
   max-width: 580px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   color: #b6c0bd;
   font-size: 17px;
   line-height: 1.65;
@@ -1194,7 +1194,7 @@ main {
 .assembly-step-spec strong { color: #d8e7e1; font-weight: 520; text-align: right; }
 
 .proof-section {
-  padding-block: 108px 118px;
+  padding-block: 82px 92px;
   border-bottom: 1px solid #aebdb7;
   background: #e4eee9;
 }
@@ -1204,7 +1204,7 @@ main {
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, .7fr);
   gap: clamp(50px, 9vw, 140px);
   align-items: end;
-  margin-bottom: 62px;
+  margin-bottom: 42px;
 }
 
 .proof-intro h2 { max-width: 760px; margin: 22px 0 0; }
@@ -1227,7 +1227,7 @@ main {
 }
 
 .proof-feature {
-  min-height: 650px;
+  min-height: 560px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border: 1px solid #1a2925;
@@ -1237,7 +1237,7 @@ main {
 }
 
 .proof-live-frame {
-  min-height: 500px;
+  min-height: 420px;
   display: grid;
   grid-template-rows: 34px 1fr;
   margin: 26px;
@@ -1536,10 +1536,10 @@ main {
   padding-block: 118px;
 }
 
-.ownership-section { padding-block: 92px; }
+.ownership-section { padding-block: 72px; }
 
 .section-intro {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .split-intro {
@@ -1587,7 +1587,7 @@ main {
 }
 
 .home-service {
-  min-height: 230px;
+  min-height: 188px;
   position: relative;
   padding: 32px;
   border: 0;
@@ -1609,7 +1609,7 @@ main {
 
 .home-service:nth-child(7) {
   grid-column: span 2;
-  min-height: 230px;
+  min-height: 188px;
 }
 
 .home-service:nth-child(6) {
@@ -1619,7 +1619,7 @@ main {
 .home-service:first-child {
   grid-column: span 2;
   grid-row: span 2;
-  min-height: 461px;
+  min-height: 377px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -1693,7 +1693,7 @@ main {
   color: var(--white);
 }
 
-.dark-section { padding-block: 96px; }
+.dark-section { padding-block: 72px; }
 
 .dark-section::before,
 .team-teaser::before {
@@ -1750,13 +1750,13 @@ main {
 }
 
 .phase-grid article {
-  min-height: 224px;
-  padding: 28px;
+  min-height: 186px;
+  padding: 22px;
   background: var(--ink);
 }
 
 .phase-grid h3 {
-  margin-top: 46px;
+  margin-top: 34px;
 }
 
 .phase-grid p {
@@ -1767,7 +1767,7 @@ main {
 }
 
 .metrics-section {
-  padding-block: 78px;
+  padding-block: 54px;
   border-bottom: 1px solid var(--ink);
   background: var(--white);
 }
@@ -1779,13 +1779,13 @@ main {
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 58px;
+  margin-top: 34px;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
 }
 
 .metrics-grid > div {
-  min-height: 142px;
+  min-height: 112px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1812,7 +1812,7 @@ main {
 }
 
 .product-feature {
-  padding-block: 90px;
+  padding-block: 68px;
   display: grid;
   grid-template-columns: .92fr 1.08fr;
   gap: clamp(50px, 8vw, 120px);
@@ -1834,7 +1834,7 @@ main {
 
 .product-visual {
   position: relative;
-  min-height: 480px;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1879,7 +1879,7 @@ main {
 }
 
 .voice-wave {
-  height: 240px;
+  height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1920,7 +1920,7 @@ main {
 .product-meta span:last-child { border-right: 0; }
 
 .faq-section {
-  padding-block: 88px;
+  padding-block: 62px;
   border-top: 1px solid var(--ink);
   background: #f1f1ef;
 }
@@ -1941,7 +1941,7 @@ main {
 
 .faq-item button {
   width: 100%;
-  min-height: 88px;
+  min-height: 70px;
   display: grid;
   grid-template-columns: 42px 1fr auto;
   align-items: center;
@@ -1969,7 +1969,7 @@ main {
 
 .faq-answer p {
   max-width: 590px;
-  margin: 0 0 28px 58px;
+  margin: 0 0 20px 58px;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -2950,12 +2950,12 @@ main {
 
 .matter-footer-inner {
   position: relative;
-  min-height: 500px;
+  min-height: 390px;
   display: grid;
   grid-template-columns: .9fr 1.1fr;
   gap: clamp(50px, 9vw, 140px);
   align-items: center;
-  padding-block: 78px;
+  padding-block: 56px;
 }
 
 .matter-footer-copy .eyebrow { color: #4c402c; }
@@ -2977,7 +2977,7 @@ main {
 
 .matter-field {
   position: relative;
-  min-height: 360px;
+  min-height: 280px;
   display: block;
   padding: 0;
   border: 1px solid #6e6049;
@@ -3062,11 +3062,11 @@ main {
 }
 
 .footer-top {
-  min-height: 270px;
+  min-height: 220px;
   display: grid;
   grid-template-columns: 1.25fr .55fr .8fr .55fr;
   gap: 48px;
-  padding-block: 56px;
+  padding-block: 44px;
 }
 
 .footer-brand img {
@@ -3097,7 +3097,7 @@ main {
 .footer-col span { color: #59482f; }
 
 .footer-bottom {
-  min-height: 64px;
+  min-height: 50px;
   display: grid;
   grid-template-columns: 1fr 1.5fr auto;
   align-items: center;
