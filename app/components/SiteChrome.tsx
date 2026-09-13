@@ -155,15 +155,9 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
               </p>
             </div>
             <div className="matter-field" aria-hidden="true">
+              <div className="matter-sand-surface" />
+              <div className="matter-sand-rake" />
               <span>Si</span>
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
               <b>SiO2</b>
             </div>
           </div>
