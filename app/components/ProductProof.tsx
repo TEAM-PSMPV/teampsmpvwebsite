@@ -21,33 +21,33 @@ export function ProductProof() {
         <div className="proof-stage">
           <div className="proof-feature">
             <div className="proof-feature-header">
-              <span>LEADFORGE / AUTH SURFACE</span>
+              <span>VISYN / AUTH SURFACE</span>
               <span>LIVE SURFACE / 02</span>
             </div>
             <div className="proof-live-frame">
               <div className="proof-live-chrome" aria-hidden="true">
                 <span /><span /><span />
-                <b>leadforge-crm.team-psmpv.workers.dev</b>
+                <b>visyn-console.teampsmpv.workers.dev</b>
               </div>
               <div className="proof-live-image-wrap">
                 <Image
                   className="proof-live-image"
-                  src="/images/leadforge-auth-panel.png"
-                  alt="LeadForge sign-in surface"
-                  width={480}
-                  height={750}
+                  src="/images/visyn-auth-surface.png"
+                  alt="Visyn sign-in surface"
+                  width={1280}
+                  height={720}
                   sizes="(max-width: 767px) 92vw, 58vw"
                 />
               </div>
             </div>
             <div className="proof-evidence">
               <span><small>SURFACE</small><strong>AUTH / LIVE</strong></span>
-              <span><small>PATH</small><strong>LOGIN → PIPELINE</strong></span>
+              <span><small>PATH</small><strong>SIGN IN → WORKSPACE</strong></span>
               <span><small>STATE</small><strong>READY TO OPEN</strong></span>
             </div>
             <div className="proof-feature-caption">
               <span>A real surface from the product system.</span>
-              <a href={products[2].url} target="_blank" rel="noopener noreferrer">Open LeadForge <span aria-hidden="true">↗</span></a>
+              <a href={products[4].url} target="_blank" rel="noopener noreferrer">Open Visyn <span aria-hidden="true">↗</span></a>
             </div>
           </div>
 
