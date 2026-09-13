@@ -1,4 +1,5 @@
 import { products } from "../data";
+import Image from "next/image";
 
 export function ProductProof() {
   const supportingProducts = products.slice(1, 4);
@@ -20,40 +21,26 @@ export function ProductProof() {
         <div className="proof-stage">
           <div className="proof-feature">
             <div className="proof-feature-header">
-              <span>LEADFORGE / PIPELINE</span>
+              <span>LEADFORGE / AUTH SURFACE</span>
               <span>LIVE SURFACE / 02</span>
             </div>
-            <div className="proof-dashboard">
-              <aside className="proof-sidebar" aria-hidden="true">
-                <span className="proof-sidebar-logo">LF</span>
-                <span className="is-selected">Pipeline</span>
-                <span>Contacts</span>
-                <span>Reports</span>
-                <span>Settings</span>
-              </aside>
-              <div className="proof-dashboard-main">
-                <div className="proof-dashboard-heading">
-                  <div>
-                    <span className="proof-kicker">MONDAY / 09:42</span>
-                    <strong>Lead pipeline</strong>
-                  </div>
-                  <span className="proof-add">+ ADD LEAD</span>
-                </div>
-                <div className="proof-pipeline">
-                  <div><span>NEW</span><strong>24</strong></div>
-                  <div><span>QUALIFIED</span><strong>09</strong></div>
-                  <div><span>IN PROGRESS</span><strong>06</strong></div>
-                  <div><span>WON</span><strong>03</strong></div>
-                </div>
-                <div className="proof-table" aria-hidden="true">
-                  <div><span>ANAND HOSPITAL</span><em>Qualified</em><b>₹ 1.2L</b></div>
-                  <div><span>ORBIT EDUCATION</span><em>In progress</em><b>₹ 80K</b></div>
-                  <div><span>VERTEX CLINIC</span><em>New</em><b>₹ 42K</b></div>
-                </div>
+            <div className="proof-live-frame">
+              <div className="proof-live-chrome" aria-hidden="true">
+                <span /><span /><span />
+                <b>leadforge-crm.team-psmpv.workers.dev</b>
+              </div>
+              <div className="proof-live-image-wrap">
+                <Image
+                  className="proof-live-image"
+                  src="/images/leadforge-auth-surface.png"
+                  alt="LeadForge sign-in surface"
+                  fill
+                  sizes="(max-width: 767px) 92vw, 58vw"
+                />
               </div>
             </div>
             <div className="proof-feature-caption">
-              <span>Inspect the result, then open the system.</span>
+              <span>A real surface from the product system.</span>
               <a href={products[2].url} target="_blank" rel="noopener noreferrer">Open LeadForge <span aria-hidden="true">↗</span></a>
             </div>
           </div>
