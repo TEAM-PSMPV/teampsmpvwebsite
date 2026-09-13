@@ -36,6 +36,7 @@ export function ProductProof() {
                   alt="Visyn sign-in surface"
                   width={1280}
                   height={720}
+                  priority
                   sizes="(max-width: 767px) 92vw, 58vw"
                 />
               </div>
@@ -62,6 +63,7 @@ export function ProductProof() {
                 src="/images/template-gallery-surface.png"
                 alt="Template Gallery homepage"
                 fill
+                priority
                 sizes="(max-width: 767px) 92vw, 31vw"
               />
               <span>Template Gallery / SHIPPED SURFACE <b aria-hidden="true">↗</b></span>
