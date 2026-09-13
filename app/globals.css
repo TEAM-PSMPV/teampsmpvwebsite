@@ -1479,7 +1479,7 @@ main {
 
 .proof-gallery-surface img {
   object-fit: cover;
-  object-position: center top;
+  object-position: center bottom;
   transition: transform var(--motion-base) var(--ease-out);
 }
 
