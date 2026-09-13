@@ -466,8 +466,8 @@ main {
 .hero-layout {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(350px, .85fr);
-  gap: clamp(40px, 5vw, 72px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(420px, 1fr);
+  gap: clamp(42px, 5vw, 66px);
   align-items: center;
 }
 
@@ -497,14 +497,14 @@ main {
 
 .hero-instrument {
   position: relative;
-  min-height: 500px;
+  min-height: 580px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border: 1px solid #384d47;
   background: #101816;
   color: var(--white);
   box-shadow: 16px 16px 0 #d6e3de;
-  transform: rotate(1.5deg);
+  transform: none;
 }
 
 .hero-instrument::before,
@@ -1841,6 +1841,20 @@ main {
   overflow: hidden;
   border: 1px solid var(--ink);
   background: #e4eee9;
+}
+
+.product-store-frame {
+  position: relative;
+  height: 238px;
+  margin: 24px 24px 0;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.product-store-frame img {
+  object-fit: cover;
+  object-position: center top;
 }
 
 .product-device {

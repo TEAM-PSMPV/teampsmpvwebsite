@@ -153,17 +153,14 @@ export default function HomePage() {
           </div>
         </Reveal>
         <Reveal className="product-visual">
-          <div className="product-device">
+          <div className="product-store-frame">
             <Image
-              src="/products/offlinetts/app-icon-white-1024.png"
-              alt="OfflineTTS app icon"
-              width={84}
-              height={84}
+              src="/images/offlinetts-store-surface.png"
+              alt="OfflineTTS Google Play listing and app screens"
+              fill
+              priority
+              sizes="(max-width: 767px) 92vw, 54vw"
             />
-            <div>
-              <strong>OFFLINETTS</strong>
-              <span>VOICE MODEL / ON DEVICE</span>
-            </div>
           </div>
           <div className="voice-wave" aria-hidden="true">
             {[28, 54, 74, 42, 88, 66, 34, 76, 50, 92, 60, 38].map((height, index) => (
