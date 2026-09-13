@@ -1221,13 +1221,13 @@ main {
 
 .proof-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
-  gap: 26px;
+  grid-template-columns: 1fr;
+  gap: 22px;
   align-items: stretch;
 }
 
 .proof-feature {
-  min-height: 560px;
+  min-height: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border: 1px solid #1a2925;
@@ -1237,7 +1237,7 @@ main {
 }
 
 .proof-live-frame {
-  min-height: 420px;
+  min-height: 560px;
   display: grid;
   grid-template-rows: 34px 1fr;
   margin: 26px;
@@ -1462,14 +1462,14 @@ main {
 .proof-feature-caption a:hover { color: #8ed7c8; }
 
 .proof-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
   border-top: 1px solid #879b93;
 }
 
 .proof-gallery-surface {
   position: relative;
-  min-height: 224px;
+  min-height: 190px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -1504,13 +1504,13 @@ main {
 .proof-gallery-surface:focus-visible img { transform: scale(1.03); }
 
 .proof-list-item {
-  min-height: 0;
-  flex: 1;
+  min-height: 190px;
   display: grid;
   grid-template-columns: 38px 1fr 22px;
   align-items: start;
   gap: 16px;
   padding: 24px 0;
+  border-left: 1px solid #b8c9c1;
   border-bottom: 1px solid #b8c9c1;
   transition: padding var(--motion-fast), background var(--motion-fast);
 }
@@ -3217,6 +3217,8 @@ main {
   .proof-stage { grid-template-columns: 1fr; }
   .proof-feature { min-height: 0; }
   .proof-live-frame { min-height: 390px; margin: 16px; }
+  .proof-list { grid-template-columns: 1fr; }
+  .proof-list-item { min-height: 0; border-left: 0; }
   .proof-dashboard { grid-template-columns: 92px 1fr; margin: 16px; }
   .proof-sidebar { padding-inline: 10px; font-size: 9px; }
   .proof-dashboard-main { padding: 14px; }
