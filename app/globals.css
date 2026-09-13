@@ -45,7 +45,7 @@ body::before {
   inset: 0;
   content: "";
   pointer-events: none;
-  opacity: .13;
+  opacity: .07;
   background-image:
     linear-gradient(to right, rgba(23, 23, 23, .035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(23, 23, 23, .035) 1px, transparent 1px);
@@ -673,7 +673,7 @@ main {
 
 .assembly-section {
   position: relative;
-  padding-block: 124px 148px;
+  padding-block: 104px 116px;
   background: #101615;
   color: var(--white);
   overflow: clip;
@@ -684,7 +684,7 @@ main {
   inset: 0;
   content: "";
   pointer-events: none;
-  opacity: .24;
+  opacity: .13;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .18) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .18) 1px, transparent 1px);
@@ -701,7 +701,7 @@ main {
 }
 
 .assembly-intro > p {
-  color: #b6c0bd;
+  color: #c6d0cc;
 }
 
 .assembly-marker,
@@ -724,7 +724,7 @@ main {
 .assembly-display {
   position: sticky;
   top: calc(var(--header-height) + 28px);
-  min-height: 590px;
+  min-height: 540px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -1108,7 +1108,7 @@ main {
 .assembly-display-copy p {
   max-width: 430px;
   margin-bottom: 0;
-  color: #b6c0bd;
+  color: #c6d0cc;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -1124,9 +1124,9 @@ main {
   display: grid;
   grid-template-columns: 58px 1fr;
   gap: 22px;
-  padding: 36px 0 42px;
+  padding: 28px 0 32px;
   border-bottom: 1px solid #3b4945;
-  opacity: .44;
+  opacity: .58;
   transition: opacity var(--motion-base), color var(--motion-base);
 }
 
@@ -1526,6 +1526,8 @@ main {
   background: var(--ink);
 }
 
+.home-service:not(:first-child)::before { display: none; }
+
 .home-service:nth-child(7) {
   grid-column: span 2;
   min-height: 230px;
@@ -1613,13 +1615,12 @@ main {
 }
 
 .dark-section::before,
-.team-teaser::before,
-.final-cta::before {
+.team-teaser::before {
   position: absolute;
   inset: 0;
   content: "";
   pointer-events: none;
-  opacity: .18;
+  opacity: .1;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .2) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
@@ -1632,13 +1633,25 @@ main {
   position: relative;
 }
 
+.final-cta::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: .13;
+  background-image:
+    linear-gradient(to right, rgba(23, 23, 23, .16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 23, 23, .16) 1px, transparent 1px);
+  background-size: 17px 17px;
+}
+
 .dark-section .eyebrow,
 .dark-section .mono-label,
 .dark-section p,
 .team-teaser .mono-label,
 .team-teaser p,
 .final-cta .mono-label {
-  color: #c9c9c9;
+  color: #d5d5d5;
 }
 
 .phase-grid {
@@ -1649,7 +1662,7 @@ main {
 }
 
 .phase-grid article {
-  min-height: 250px;
+  min-height: 224px;
   padding: 28px;
   background: var(--ink);
 }
@@ -1660,7 +1673,7 @@ main {
 
 .phase-grid p {
   margin-bottom: 0;
-  color: #b8b8b8;
+  color: #d0d0d0;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -1819,7 +1832,7 @@ main {
 
 .faq-section {
   border-top: 1px solid var(--ink);
-  background: var(--white);
+  background: #f1f1ef;
 }
 
 .faq-layout {
@@ -1872,7 +1885,9 @@ main {
 }
 
 .final-cta {
-  padding-block: 92px;
+  padding-block: 104px;
+  background: #d7c18d;
+  color: var(--ink);
 }
 
 .final-cta-inner {
@@ -1886,6 +1901,15 @@ main {
   max-width: 770px;
   margin-bottom: 0;
 }
+
+.final-cta .mono-label { color: #59482f; }
+.final-cta .cut-button.inverse {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--white);
+}
+.final-cta .cut-button.inverse::before,
+.final-cta .cut-button.inverse::after { background: #d7c18d; }
 
 .page-hero {
   padding-block: 112px;
@@ -2914,7 +2938,7 @@ main {
   left: 13%;
   color: #fff4d2;
   font-family: var(--font-inter-display), sans-serif;
-  font-size: clamp(58px, 9vw, 118px);
+  font-size: clamp(38px, 5vw, 72px);
   font-weight: 600;
   line-height: .8;
   text-shadow: 0 2px 18px rgba(38, 26, 13, .52);
@@ -2948,11 +2972,11 @@ main {
 }
 
 .footer-top {
-  min-height: 330px;
+  min-height: 270px;
   display: grid;
   grid-template-columns: 1.25fr .55fr .8fr .55fr;
   gap: 48px;
-  padding-block: 72px;
+  padding-block: 56px;
 }
 
 .footer-brand img {
