@@ -34,7 +34,8 @@ export function ProductProof() {
                   className="proof-live-image"
                   src="/images/leadforge-auth-surface.png"
                   alt="LeadForge sign-in surface"
-                  fill
+                  width={1280}
+                  height={1056}
                   sizes="(max-width: 767px) 92vw, 58vw"
                 />
               </div>
