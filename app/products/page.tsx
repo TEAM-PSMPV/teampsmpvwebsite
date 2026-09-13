@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PixelSignal, Reveal } from "../components/Interactive";
+import { products } from "../data";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -16,6 +17,37 @@ export default function ProductsPage() {
         <p className="eyebrow"><PixelSignal /> /INTERNAL INNOVATION</p>
         <h1>REAL PRODUCTS BUILT BY TEAM-PSMPV.</h1>
         <p className="page-lead">Only active product information is shown.</p>
+      </section>
+
+      <section className="product-network" aria-labelledby="product-network-title">
+        <div className="content">
+          <div className="section-intro split-intro">
+            <div>
+              <p className="mono-label">/PRODUCT SYSTEM</p>
+              <h2 id="product-network-title">FIVE SURFACES. ONE ENGINEERING MINDSET.</h2>
+            </div>
+            <p>
+              Each product has its own surface and address. The shared thread is the same:
+              useful software, carefully assembled and ready to open.
+            </p>
+          </div>
+          <div className="product-network-list">
+            {products.map((product, index) => (
+              <a
+                className="product-network-item"
+                href={product.url}
+                key={product.id}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="product-network-index">0{index + 1}</span>
+                <span className="product-network-name">{product.name}</span>
+                <span className="product-network-category">{product.category}</span>
+                <span className="product-network-destination">{product.destination} <span aria-hidden="true">↗</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="section content product-catalog">

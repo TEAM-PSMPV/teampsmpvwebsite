@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { navigation } from "../data";
+import { navigation, products } from "../data";
 
 function IndiaTime() {
   const [time, setTime] = useState("--:--");
@@ -53,6 +53,27 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header className="site-header">
+        <div className="product-strip">
+          <div className="product-strip-inner content">
+            <span className="product-strip-label">/PRODUCT SYSTEM</span>
+            <nav className="product-strip-list" aria-label="TEAM-PSMPV products">
+              {products.map((product, index) => (
+                <a
+                  className="product-strip-item"
+                  href={product.url}
+                  key={product.id}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${product.name}, ${product.category}. ${product.destination}`}
+                >
+                  <span className="product-strip-index">0{index + 1}</span>
+                  <span>{product.name}</span>
+                  <span className="product-strip-arrow" aria-hidden="true">↗</span>
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
         <div className="header-inner">
           <Link className="brand-link" href="/" aria-label="TEAM-PSMPV home">
             <Image
@@ -122,6 +143,36 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       {children}
 
       <footer className="site-footer">
+        <section className="matter-footer" aria-labelledby="matter-footer-title">
+          <div className="content matter-footer-inner">
+            <div className="matter-footer-copy">
+              <p className="eyebrow"><span className="matter-marker" aria-hidden="true" /> /END OF STACK</p>
+              <h2 id="matter-footer-title">AT THE BOTTOM, THE SYSTEM IS MATTER.</h2>
+              <p>
+                Refined silica becomes silicon. Silicon becomes transistors. Transistors
+                carry signals. Signals become software that can help someone move through
+                the world with more clarity.
+              </p>
+            </div>
+            <div className="matter-field" aria-hidden="true">
+              <span>Si</span>
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <b>SiO2</b>
+            </div>
+          </div>
+          <div className="content matter-footer-meta">
+            <span>ELEMENT 14 / SILICON</span>
+            <span>FROM ORDINARY MATERIAL TO EXTRAORDINARY CAPABILITY</span>
+            <span>01 - 10</span>
+          </div>
+        </section>
         <div className="content footer-top">
           <div className="footer-brand">
             <Image

@@ -14,6 +14,58 @@ export const navigation = [
   { label: "Our products", href: "/products" },
 ];
 
+export type Product = {
+  id: string;
+  name: string;
+  category: string;
+  positioning: string;
+  url: string;
+  destination: string;
+};
+
+export const products: Product[] = [
+  {
+    id: "offlinetts",
+    name: "OfflineTTS",
+    category: "Android / On-device",
+    positioning: "Private text-to-speech without the internet.",
+    url: "https://play.google.com/store/apps/details?id=com.psmpv.offlinetts",
+    destination: "Google Play",
+  },
+  {
+    id: "appointflow",
+    name: "AppointFlow",
+    category: "Workflow / Scheduling",
+    positioning: "Appointment operations shaped into a clear flow.",
+    url: "https://appointflow.teampsmpv.com/",
+    destination: "Open product",
+  },
+  {
+    id: "leadforge",
+    name: "LeadForge",
+    category: "CRM / Pipeline",
+    positioning: "A focused workspace for leads and follow-through.",
+    url: "https://leadforge-crm.team-psmpv.workers.dev/login",
+    destination: "Open console",
+  },
+  {
+    id: "template-gallery",
+    name: "Template Gallery",
+    category: "Templates / Systems",
+    positioning: "Reusable starting points for modern digital work.",
+    url: "https://team-psmpv-template-gallery.teampsmpv.workers.dev/",
+    destination: "Browse gallery",
+  },
+  {
+    id: "visyn",
+    name: "Visyn",
+    category: "Console / Vision",
+    positioning: "A visual command surface for connected systems.",
+    url: "https://visyn-console.teampsmpv.workers.dev/auth",
+    destination: "Open console",
+  },
+];
+
 export const services: Service[] = [
   {
     id: "website-digital-presence",

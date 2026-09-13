@@ -6,6 +6,7 @@ import {
   PixelSignal,
   Reveal,
 } from "./components/Interactive";
+import { AssemblyStory } from "./components/AssemblyStory";
 import { deliveryPhases, faqs, services } from "./data";
 
 export default function HomePage() {
@@ -54,6 +55,8 @@ export default function HomePage() {
           <span>SUPPORT AFTER LAUNCH</span>
         </div>
       </div>
+
+      <AssemblyStory />
 
       <section className="section content ownership-section">
         <Reveal className="section-intro split-intro">
