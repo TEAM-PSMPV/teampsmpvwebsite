@@ -7,6 +7,7 @@ import {
   Reveal,
 } from "./components/Interactive";
 import { AssemblyStory } from "./components/AssemblyStory";
+import { ProductProof } from "./components/ProductProof";
 import { deliveryPhases, faqs, services } from "./data";
 
 export default function HomePage() {
@@ -57,6 +58,8 @@ export default function HomePage() {
       </div>
 
       <AssemblyStory />
+
+      <ProductProof />
 
       <section className="section content ownership-section">
         <Reveal className="section-intro split-intro">
