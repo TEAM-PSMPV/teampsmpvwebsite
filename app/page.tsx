@@ -7,6 +7,7 @@ import {
   Reveal,
 } from "./components/Interactive";
 import { AssemblyStory } from "./components/AssemblyStory";
+import { HeroInstrument } from "./components/HeroInstrument";
 import { ProductProof } from "./components/ProductProof";
 import { deliveryPhases, faqs, services } from "./data";
 
@@ -14,38 +15,41 @@ export default function HomePage() {
   return (
     <main id="main-content">
       <section className="hero content">
-        <HeroReveal>
-          <HeroItem>
-            <div className="eyebrow">
-              <PixelSignal />
-              <span>/PRECISION IN MOTION</span>
-            </div>
-          </HeroItem>
-          <HeroItem>
-            <h1>
-              ENGINEERING THE
-              <br />
-              ESSENTIAL.
-            </h1>
-          </HeroItem>
-          <HeroItem>
-            <p className="hero-lead">
-              TEAM-PSMPV takes practical ownership of the systems businesses rely on,
-              from the first interface to the workflow, automation, release and support
-              behind it.
-            </p>
-          </HeroItem>
-          <HeroItem>
-            <div className="button-row">
-              <Link className="cut-button" href="/contact-us">
-                Consult with us <span aria-hidden="true">↗</span>
-              </Link>
-              <Link className="cut-button secondary" href="/case-study">
-                View our work <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </HeroItem>
-        </HeroReveal>
+        <div className="hero-layout">
+          <HeroReveal>
+            <HeroItem>
+              <div className="eyebrow">
+                <PixelSignal />
+                <span>/PRECISION IN MOTION</span>
+              </div>
+            </HeroItem>
+            <HeroItem>
+              <h1>
+                ENGINEERING THE
+                <br />
+                ESSENTIAL.
+              </h1>
+            </HeroItem>
+            <HeroItem>
+              <p className="hero-lead">
+                TEAM-PSMPV takes practical ownership of the systems businesses rely on,
+                from the first interface to the workflow, automation, release and support
+                behind it.
+              </p>
+            </HeroItem>
+            <HeroItem>
+              <div className="button-row">
+                <Link className="cut-button" href="/contact-us">
+                  Consult with us <span aria-hidden="true">↗</span>
+                </Link>
+                <Link className="cut-button secondary" href="/case-study">
+                  View our work <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </HeroItem>
+          </HeroReveal>
+          <HeroInstrument />
+        </div>
       </section>
 
       <div className="signal-strip">
