@@ -497,7 +497,7 @@ main {
 
 .hero-instrument {
   position: relative;
-  min-height: 420px;
+  min-height: 500px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   border: 1px solid #384d47;
@@ -684,7 +684,7 @@ main {
   inset: 0;
   content: "";
   pointer-events: none;
-  opacity: .13;
+  display: none;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .18) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .18) 1px, transparent 1px);
@@ -1151,7 +1151,7 @@ main {
   max-width: 580px;
   margin-bottom: 20px;
   color: #b6c0bd;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -1701,7 +1701,7 @@ main {
   inset: 0;
   content: "";
   pointer-events: none;
-  opacity: .1;
+  display: none;
   background-image:
     linear-gradient(to right, rgba(255, 255, 255, .2) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, .2) 1px, transparent 1px);
@@ -1719,7 +1719,7 @@ main {
   inset: 0;
   content: "";
   pointer-events: none;
-  opacity: .13;
+  display: none;
   background-image:
     linear-gradient(to right, rgba(23, 23, 23, .16) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(23, 23, 23, .16) 1px, transparent 1px);
@@ -1733,6 +1733,13 @@ main {
 .team-teaser p,
 .final-cta .mono-label {
   color: #d5d5d5;
+}
+
+.dark-section p,
+.product-feature-copy > p:not(.eyebrow),
+.faq-answer p,
+.matter-footer-copy > p:last-child {
+  font-size: 17px;
 }
 
 .phase-grid {
@@ -1755,7 +1762,7 @@ main {
 .phase-grid p {
   margin-bottom: 0;
   color: #d0d0d0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -1814,7 +1821,7 @@ main {
 
 .product-feature-copy > p:not(.eyebrow) {
   max-width: 520px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -1963,7 +1970,7 @@ main {
 .faq-answer p {
   max-width: 590px;
   margin: 0 0 28px 58px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -2918,7 +2925,7 @@ main {
 
 .site-footer {
   border-top: 1px solid var(--ink);
-  background: var(--surface);
+  background: #d7c18d;
 }
 
 .matter-footer {
@@ -2958,7 +2965,7 @@ main {
   max-width: 580px;
   margin-bottom: 0;
   color: #554833;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -3070,7 +3077,7 @@ main {
 .footer-registration {
   max-width: 430px;
   margin: 16px 0 0;
-  color: var(--muted);
+  color: #59482f;
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
   line-height: 1.6;
@@ -3086,7 +3093,8 @@ main {
 }
 
 .footer-col a:hover { color: var(--teal); }
-.footer-col span { color: var(--muted); }
+.site-footer .mono-label,
+.footer-col span { color: #59482f; }
 
 .footer-bottom {
   min-height: 64px;
@@ -3094,7 +3102,8 @@ main {
   grid-template-columns: 1fr 1.5fr auto;
   align-items: center;
   gap: 30px;
-  border-top: 1px solid var(--divider);
+  border-top: 1px solid rgba(89, 72, 47, .42);
+  color: #59482f;
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
   text-transform: uppercase;
