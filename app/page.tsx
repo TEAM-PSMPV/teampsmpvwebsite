@@ -12,7 +12,7 @@ import {
   ProductScreens,
   ServiceSystem,
 } from "./components/PrecisionMotion";
-import { SystemCore } from "./components/SystemCore";
+import { HeroModel } from "./components/HeroModel";
 import { deliveryPhases, faqs, services } from "./data";
 
 export default function HomePage() {
@@ -50,10 +50,23 @@ export default function HomePage() {
                   View our work <span aria-hidden="true">→</span>
                 </Link>
               </div>
+              <div className="hero-quick-contact" aria-label="Quick contact">
+                <a href="tel:+918218501002" aria-label="Call TEAM-PSMPV">
+                  Call <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  href="https://wa.me/918218501002?text=Hi%20TEAM-PSMPV%2C%20I%20want%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Message TEAM-PSMPV on WhatsApp"
+                >
+                  WhatsApp <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </HeroItem>
           </HeroReveal>
         </div>
-        <SystemCore className="hero-system-core" />
+        <HeroModel />
       </section>
 
       <div className="signal-strip">

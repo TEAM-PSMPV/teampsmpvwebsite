@@ -1,0 +1,35 @@
+/* Scoped to the homepage model; retain the deployed page's foundations. */
+.surface-instrument { min-width: 0; width: 100%; margin: 0; }
+.surface-instrument-header, .surface-instrument-footer {
+  min-height: 46px; display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; border-top: 1px solid var(--divider); color: var(--muted);
+  font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: .04em;
+}
+.surface-stage { position: relative; height: clamp(360px, 33vw, 470px); overflow: hidden; background: radial-gradient(ellipse at center, #e9e9e7, transparent 68%); }
+.surface-canvas { position: absolute; inset: 0; opacity: 0; }
+.surface-canvas canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+.surface-canvas canvas:active { cursor: grabbing; }
+.surface-canvas canvas:focus-visible { outline: 2px solid var(--ink); outline-offset: -4px; }
+.surface-stage[data-status="ready"] .surface-canvas { opacity: 1; }
+.surface-poster { object-fit: contain; filter: grayscale(1); }
+.surface-stage[data-status="ready"] .surface-poster { visibility: hidden; }
+.surface-axis { position: absolute; left: 14px; bottom: 16px; color: var(--muted); font-family: monospace; font-size: 11px; pointer-events: none; }
+.surface-stage-caption { position: absolute; right: 0; bottom: 16px; color: var(--muted); font-family: var(--font-geist-mono), monospace; font-size: 9px; letter-spacing: .05em; pointer-events: none; }
+.surface-instrument-footer button { min-height: 44px; display: inline-flex; align-items: center; gap: 12px; padding: 4px 0 4px 12px; border: 0; background: transparent; color: var(--ink); font: inherit; cursor: pointer; }
+.surface-instrument-footer button:hover { text-decoration: underline; text-underline-offset: 4px; }
+.surface-credit { margin: 4px 0 0; color: var(--muted); font-size: 10px; text-align: right; }
+.surface-credit a { text-decoration: underline; text-underline-offset: 3px; }
+.hero-quick-contact { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.hero-quick-contact a { min-height: 44px; display: inline-flex; align-items: center; gap: 24px; padding: 9px 16px; border: 1px solid var(--divider); color: var(--ink); font-size: 13px; transition: background 180ms, color 180ms; }
+.hero-quick-contact a:hover { background: var(--ink); color: var(--white); }
+.hero-quick-contact a:focus-visible, .surface-instrument-footer button:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+@media (max-width: 1199px) and (min-width: 1024px) { .surface-stage { height: 380px; } }
+@media (max-width: 1023px) { .surface-instrument { max-width: 620px; margin-inline: auto; } }
+@media (max-width: 767px) {
+  .surface-stage { height: 300px; }
+  .surface-instrument-header { font-size: 9px; }
+  .surface-instrument-footer { font-size: 8px; }
+  .surface-stage-caption { font-size: 8px; }
+  .hero-quick-contact { display: grid; grid-template-columns: 1fr 1fr; }
+  .hero-quick-contact a { justify-content: space-between; }
+}
