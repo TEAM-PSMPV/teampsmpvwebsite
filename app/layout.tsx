@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { SiteChrome } from "./components/SiteChrome";
 import "./globals.css";
-import "./surface.css";
 
 const geist = Geist({
   variable: "--font-geist",
