@@ -25,3 +25,10 @@ same-viewport visual comparison could not be completed.
 - Verified 360, 390, 768, 1024, 1280 and 1440px: no horizontal overflow or overlap between hero text and model; Call and WhatsApp links have the requested destinations and accessible labels.
 - Mobile does not request the GLB until “Explore in 3D” is selected. Desktop loads the renderer dynamically near the viewport. Reduced motion, pause/resume, keyboard rotation, missing model and unavailable WebGL fallback were verified.
 - All existing public routes checked returned HTTP 200; no GLB requests on other routes. Browser reported no errors in normal use. Lint, production build, artifact validation and rendered HTML/model tests passed.
+
+
+## Page opening spacing — 4 October 2026
+
+- Reduced the padding below navigation across all 13 public pages to 32px on desktop/tablet and 24px on mobile. Removed the homepage's viewport-height minimum and aligned hero columns at the top so they do not reintroduce the empty band. Applied matching spacing to the 404 page.
+- Allowed the About page's long team role label to wrap; it previously caused horizontal overflow at 768px.
+- Checked all public pages at 360, 390, 768, 1024, 1280 and 1440px for opening padding, route responses, horizontal overflow and browser errors.

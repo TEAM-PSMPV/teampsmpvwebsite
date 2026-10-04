@@ -3127,3 +3127,36 @@ main {
     transform: none;
   }
 }
+
+/* Keep every page opening close to the fixed navigation. */
+main > section:first-child {
+  padding-top: 32px;
+}
+
+main > .hero:first-child {
+  min-height: 0;
+  align-items: start;
+}
+
+main > .page-hero-system:first-child {
+  align-items: start;
+}
+
+main.not-found {
+  justify-content: flex-start;
+  padding-top: calc(var(--header-height) + 32px);
+}
+
+@media (max-width: 767px) {
+  main > section:first-child {
+    padding-top: 24px;
+  }
+
+  main.not-found {
+    padding-top: calc(var(--header-height) + 24px);
+  }
+}
+
+.team-role {
+  overflow-wrap: anywhere;
+}
