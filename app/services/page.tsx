@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PixelSignal, ServiceFilter } from "../components/Interactive";
+import { SystemCore } from "../components/SystemCore";
 import { services } from "../data";
 
 export const metadata: Metadata = {
@@ -13,13 +14,16 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main id="main-content">
-      <section className="page-hero content">
-        <p className="eyebrow"><PixelSignal /> /CAPABILITY SYSTEM</p>
-        <h1>07 PILLARS OF PRACTICAL ENGINEERING.</h1>
-        <p className="page-lead">
-          A modular service portfolio designed to take a project from requirement
-          discovery to implementation, secure release and long-term operation.
-        </p>
+      <section className="page-hero page-hero-system content">
+        <div>
+          <p className="eyebrow"><PixelSignal /> /CAPABILITY SYSTEM</p>
+          <h1>07 PILLARS OF PRACTICAL ENGINEERING.</h1>
+          <p className="page-lead">
+            A modular service portfolio designed to take a project from requirement
+            discovery to implementation, secure release and long-term operation.
+          </p>
+        </div>
+        <SystemCore mode="exploded" activeLayer={1} />
       </section>
       <section className="content service-catalog section">
         <ServiceFilter services={services} />

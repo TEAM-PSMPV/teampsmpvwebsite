@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   FaqAccordion,
   HeroItem,
@@ -7,16 +6,20 @@ import {
   PixelSignal,
   Reveal,
 } from "./components/Interactive";
-import { AssemblyStory } from "./components/AssemblyStory";
-import { HeroInstrument } from "./components/HeroInstrument";
-import { ProductProof } from "./components/ProductProof";
+import {
+  DeliveryStory,
+  MetricValue,
+  ProductScreens,
+  ServiceSystem,
+} from "./components/PrecisionMotion";
+import { SystemCore } from "./components/SystemCore";
 import { deliveryPhases, faqs, services } from "./data";
 
 export default function HomePage() {
   return (
-    <main id="main-content" className="model-home">
-      <section className="hero content model-hero">
-        <div className="hero-layout">
+    <main id="main-content">
+      <section className="hero content">
+        <div className="hero-copy">
           <HeroReveal>
             <HeroItem>
               <div className="eyebrow">
@@ -49,8 +52,8 @@ export default function HomePage() {
               </div>
             </HeroItem>
           </HeroReveal>
-          <HeroInstrument />
         </div>
+        <SystemCore className="hero-system-core" />
       </section>
 
       <div className="signal-strip">
@@ -61,10 +64,6 @@ export default function HomePage() {
           <span>SUPPORT AFTER LAUNCH</span>
         </div>
       </div>
-
-      <AssemblyStory />
-
-      <ProductProof />
 
       <section className="section content ownership-section">
         <Reveal className="section-intro split-intro">
@@ -83,18 +82,7 @@ export default function HomePage() {
           </div>
         </Reveal>
 
-        <div className="home-service-grid">
-          {services.map((service) => (
-            <Reveal className="home-service" key={service.id}>
-              <span className="mono-label">/{service.number}</span>
-              <h3>{service.title}</h3>
-              <p>{service.positioning}</p>
-              <Link href={`/services#${service.id}`} aria-label={`Read about ${service.title}`}>
-                <span aria-hidden="true">↗</span>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
+        <ServiceSystem services={services} />
       </section>
 
       <section className="section dark-section">
@@ -109,15 +97,7 @@ export default function HomePage() {
               fewer assumptions, controlled change and systems that remain supportable.
             </p>
           </Reveal>
-          <div className="phase-grid">
-            {deliveryPhases.map(([number, title, description]) => (
-              <article key={number}>
-                <span className="mono-label">/{number}</span>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
+          <DeliveryStory phases={deliveryPhases} />
         </div>
       </section>
 
@@ -126,10 +106,10 @@ export default function HomePage() {
           <p className="mono-label">/OPERATING MODEL</p>
           <h2>STRUCTURED TO SCALE. LEAN ENOUGH TO MOVE.</h2>
           <div className="metrics-grid">
-            <div><strong>12</strong><span>Functional teams</span></div>
-            <div><strong>07</strong><span>Productised services</span></div>
-            <div><strong>08</strong><span>Delivery gates</span></div>
-            <div><strong>01</strong><span>Accountable partner</span></div>
+            <div><strong><MetricValue value={12} /></strong><span>Functional teams</span></div>
+            <div><strong><MetricValue value={7} /></strong><span>Productised services</span></div>
+            <div><strong><MetricValue value={8} /></strong><span>Delivery gates</span></div>
+            <div><strong><MetricValue value={1} /></strong><span>Accountable partner</span></div>
           </div>
         </div>
       </section>
@@ -153,20 +133,7 @@ export default function HomePage() {
           </div>
         </Reveal>
         <Reveal className="product-visual">
-          <div className="product-store-frame">
-            <Image
-              src="/images/offlinetts-store-surface.png"
-              alt="OfflineTTS Google Play listing and app screens"
-              fill
-              priority
-              sizes="(max-width: 767px) 92vw, 54vw"
-            />
-          </div>
-          <div className="voice-wave" aria-hidden="true">
-            {[28, 54, 74, 42, 88, 66, 34, 76, 50, 92, 60, 38].map((height, index) => (
-              <span key={index} style={{ height: `${height}%` }} />
-            ))}
-          </div>
+          <ProductScreens compact />
           <div className="product-meta">
             <span>ANDROID</span>
             <span>ON-DEVICE</span>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm, PixelSignal } from "../components/Interactive";
+import { SystemCore } from "../components/SystemCore";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -18,6 +19,7 @@ export default function ContactPage() {
             Tell us what the current process looks like, where it breaks and what a useful
             outcome would change. We&apos;ll turn that into a structured first conversation.
           </p>
+          <SystemCore className="contact-system-core" mode="compact" activeLayer={0} />
           <div className="contact-direct">
             <span className="mono-label">DIRECT CHANNELS</span>
             <a href="mailto:support@teampsmpv.com">support@teampsmpv.com</a>

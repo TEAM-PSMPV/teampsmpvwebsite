@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PixelSignal } from "../../components/Interactive";
+import { ProductScreens } from "../../components/PrecisionMotion";
+import { SystemCore } from "../../components/SystemCore";
 
 const playStoreUrl =
   "https://play.google.com/store/apps/details?id=com.psmpv.offlinetts";
@@ -16,18 +18,27 @@ export const metadata: Metadata = {
 export default function OfflineTTSPage() {
   return (
     <main id="main-content">
-      <section className="page-hero content product-detail-hero">
-        <p className="eyebrow"><PixelSignal /> /OFFLINETTS</p>
-        <h1>UNCENSORED. NO INTERNET. NO LIMITS. JUST VOICE.</h1>
-        <p className="page-lead">
-          OfflineTTS converts text into speech on-device after selected voice models are installed.
-        </p>
-        <div className="button-row">
-          <a className="cut-button" href={playStoreUrl} target="_blank" rel="noopener noreferrer">
-            Get it on Google Play <span aria-hidden="true">↗</span>
-          </a>
-          <Link className="cut-button secondary" href="/products/offlinetts/privacy-policy">Privacy policy</Link>
+      <section className="page-hero page-hero-system content product-detail-hero">
+        <div>
+          <p className="eyebrow"><PixelSignal /> /OFFLINETTS</p>
+          <h1>UNCENSORED. NO INTERNET. NO LIMITS. JUST VOICE.</h1>
+          <p className="page-lead">
+            OfflineTTS converts text into speech on-device after selected voice models are installed.
+          </p>
+          <div className="button-row">
+            <a className="cut-button" href={playStoreUrl} target="_blank" rel="noopener noreferrer">
+              Get it on Google Play <span aria-hidden="true">↗</span>
+            </a>
+            <Link className="cut-button secondary" href="/products/offlinetts/privacy-policy">Privacy policy</Link>
+          </div>
         </div>
+        <SystemCore mode="product" activeLayer={1} />
+      </section>
+
+      <section className="content offlinetts-interface-section" aria-labelledby="offlinetts-interface-title">
+        <p className="mono-label">/REAL PRODUCT INTERFACE</p>
+        <h2 id="offlinetts-interface-title">FROM SCRIPT TO PRIVATE AUDIO.</h2>
+        <ProductScreens />
       </section>
 
       <section className="content offlinetts-download-section">

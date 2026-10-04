@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PixelSignal, Reveal } from "../components/Interactive";
+import { SystemCore } from "../components/SystemCore";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -41,13 +42,16 @@ const teamLeads = [
 export default function AboutPage() {
   return (
     <main id="main-content">
-      <section className="page-hero content about-opening">
-        <p className="eyebrow"><PixelSignal /> /ABOUT TEAM-PSMPV</p>
-        <h1>A REBELLION AGAINST FRAGMENTED DELIVERY.</h1>
-        <p className="page-lead">
-          TEAM-PSMPV brings consulting, interface design, software engineering,
-          automation, security, testing and support into one accountable operating model.
-        </p>
+      <section className="page-hero page-hero-system content about-opening">
+        <div>
+          <p className="eyebrow"><PixelSignal /> /ABOUT TEAM-PSMPV</p>
+          <h1>A REBELLION AGAINST FRAGMENTED DELIVERY.</h1>
+          <p className="page-lead">
+            TEAM-PSMPV brings consulting, interface design, software engineering,
+            automation, security, testing and support into one accountable operating model.
+          </p>
+        </div>
+        <SystemCore mode="assembled" />
       </section>
 
       <section className="acronym-section">
