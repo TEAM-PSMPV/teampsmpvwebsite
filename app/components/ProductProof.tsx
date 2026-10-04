@@ -13,8 +13,8 @@ export function ProductProof() {
             <h2 id="proof-title">IDEAS ARE MORE CONVINCING WHEN THEY HAVE A SURFACE.</h2>
           </div>
           <p>
-            The stack matters because it ends in something usable. These are working product
-            surfaces from the same system: focused tools with a name, a workflow and a door.
+            Connected thinking ends in something usable. These are working product
+            surfaces from the same team: focused tools with a name, a workflow and a door.
           </p>
         </div>
 

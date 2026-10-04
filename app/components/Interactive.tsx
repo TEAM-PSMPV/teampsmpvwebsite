@@ -16,11 +16,10 @@ export function PixelSignal() {
 }
 
 export function HeroReveal({ children }: { children: React.ReactNode }) {
-  const reduce = useReducedMotion();
   return (
     <motion.div
       className="hero-reveal"
-      initial={reduce ? false : "hidden"}
+      initial={false}
       animate="show"
       variants={{
         hidden: {},

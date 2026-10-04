@@ -15,8 +15,8 @@ import { deliveryPhases, faqs, services } from "./data";
 export default function HomePage() {
   return (
     <main id="main-content">
-      <section className="hero content">
-        <div className="hero-layout">
+      <section className="hero surface-hero">
+        <div className="content hero-layout">
           <HeroReveal>
             <HeroItem>
               <div className="eyebrow">
@@ -62,9 +62,22 @@ export default function HomePage() {
         </div>
       </div>
 
-      <AssemblyStory />
+      <section className="surface-bridge" aria-labelledby="surface-bridge-title">
+        <div className="content surface-bridge-layout">
+          <div>
+            <p className="mono-label">/CONNECTED BY DESIGN</p>
+            <h2 id="surface-bridge-title">MANY PARTS.<br />ONE COHERENT SYSTEM.</h2>
+          </div>
+          <div>
+            <p>A useful product brings its interface, logic and operations into alignment. We work across those connections, from the first requirement to daily use.</p>
+            <Link className="text-link" href="/services">Explore our approach <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+      </section>
 
       <ProductProof />
+
+      <AssemblyStory />
 
       <section className="section content ownership-section">
         <Reveal className="section-intro split-intro">
