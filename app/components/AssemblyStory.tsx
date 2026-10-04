@@ -81,7 +81,7 @@ export function AssemblyStory() {
         <div className="section-intro split-intro assembly-intro">
           <div>
             <p className="eyebrow"><span className="assembly-marker" aria-hidden="true" /> /THE STACK UNDER THE SCREEN</p>
-            <h2 id="assembly-title">EVERY APP IS A CAREFULLY ARRANGED SIGNAL.</h2>
+            <h2 id="assembly-title">COMPLEX SYSTEMS. CONNECTED AT EVERY LAYER.</h2>
           </div>
           <p>
             Scroll through the transformations. The polished product at the top is still

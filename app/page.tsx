@@ -14,8 +14,8 @@ import { deliveryPhases, faqs, services } from "./data";
 
 export default function HomePage() {
   return (
-    <main id="main-content">
-      <section className="hero content">
+    <main id="main-content" className="model-home">
+      <section className="hero content model-hero">
         <div className="hero-layout">
           <HeroReveal>
             <HeroItem>
